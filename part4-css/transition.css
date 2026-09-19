@@ -1,0 +1,27 @@
+ /* div{
+    height: 100px;
+    width: 100px;
+    background-color: #11d67d;
+    transition-duration: 2s;
+    transition-delay: 2s;
+    transition: all 0.5s ease-in-out; 
+
+}  
+div:hover{
+    background-color: black;
+    border-radius: 50px;
+} */
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    margin-top: 10px;
+    margin:0 auto;
+    transition: margin-top 2s ease-in-out 0.2s;
+}
+
+div:hover{
+    margin-top: 400px;
+    background-color: pink;
+}
