@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox Playground</title>
+  <link rel="stylesheet" href="../css/flexbox.css">
+</head>
+<body>
+
+  <h1>CSS Flexbox Playground</h1>
+
+  <!-- 1. DISPLAY FLEX -->
+  <section>
+    <h2>1. display: flex</h2>
+    <p>Turns the container into a flex container. Its direct children become flex items.</p>
+
+    <div class="flex-container display-demo">
+      <div class="violet">violet</div>
+      <div class="indigo">indigo</div>
+      <div class="blue">blue</div>
+    </div>
+  </section>
+
+  <!-- 2. FLEX DIRECTION -->
+  <section>
+    <h2>2. flex-direction</h2>
+    <p>Controls the main axis and the direction in which flex items are placed.</p>
+
+    <h3>row</h3>
+    <div class="flex-container direction-row">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>row-reverse</h3>
+    <div class="flex-container direction-row-reverse">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>column</h3>
+    <div class="flex-container direction-column">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>column-reverse</h3>
+    <div class="flex-container direction-column-reverse">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+  </section>
+
+  <!-- 3. JUSTIFY CONTENT -->
+  <section>
+    <h2>3. justify-content</h2>
+    <p>Distributes flex items along the <strong>main axis</strong>.</p>
+
+    <h3>flex-start</h3>
+    <div class="flex-container justify-start">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>flex-end</h3>
+    <div class="flex-container justify-end">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>center</h3>
+    <div class="flex-container justify-center">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>space-between</h3>
+    <div class="flex-container justify-between">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>space-around</h3>
+    <div class="flex-container justify-around">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>space-evenly</h3>
+    <div class="flex-container justify-evenly">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+  </section>
+
+  <!-- 4. FLEX WRAP -->
+  <section>
+    <h2>4. flex-wrap</h2>
+    <p>Controls whether flex items stay on one line or move onto multiple lines.</p>
+
+    <h3>nowrap</h3>
+    <div class="flex-container wrap-demo nowrap">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+      <div class="green">4</div><div class="yellow">5</div><div class="orange">6</div><div class="red">7</div>
+    </div>
+
+    <h3>wrap</h3>
+    <div class="flex-container wrap-demo wrap">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+      <div class="green">4</div><div class="yellow">5</div><div class="orange">6</div><div class="red">7</div>
+    </div>
+
+    <h3>wrap-reverse</h3>
+    <div class="flex-container wrap-demo wrap-reverse">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+      <div class="green">4</div><div class="yellow">5</div><div class="orange">6</div><div class="red">7</div>
+    </div>
+  </section>
+
+  <!-- 5. ALIGN ITEMS -->
+  <section>
+    <h2>5. align-items</h2>
+    <p>Aligns flex items along the <strong>cross axis</strong> of a single flex line.</p>
+
+    <h3>stretch</h3>
+    <div class="flex-container align-stretch">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>flex-start</h3>
+    <div class="flex-container align-start">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>flex-end</h3>
+    <div class="flex-container align-end">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>center</h3>
+    <div class="flex-container align-center">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+    </div>
+
+    <h3>baseline</h3>
+    <div class="flex-container align-baseline">
+      <div class="violet small-text">Small</div>
+      <div class="indigo large-text">Large</div>
+      <div class="blue medium-text">Medium</div>
+    </div>
+  </section>
+
+  <!-- 6. ALIGN CONTENT -->
+  <section>
+    <h2>6. align-content</h2>
+    <p>Distributes <strong>multiple flex lines</strong> along the cross axis. It works when wrapping creates more than one line.</p>
+
+    <h3>flex-start</h3>
+    <div class="flex-container multi-line align-content-start">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+      <div class="green">4</div><div class="yellow">5</div><div class="orange">6</div>
+      <div class="red">7</div>
+    </div>
+
+    <h3>center</h3>
+    <div class="flex-container multi-line align-content-center">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+      <div class="green">4</div><div class="yellow">5</div><div class="orange">6</div>
+      <div class="red">7</div>
+    </div>
+
+    <h3>space-between</h3>
+    <div class="flex-container multi-line align-content-between">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+      <div class="green">4</div><div class="yellow">5</div><div class="orange">6</div>
+      <div class="red">7</div>
+    </div>
+
+    <h3>space-around</h3>
+    <div class="flex-container multi-line align-content-around">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+      <div class="green">4</div><div class="yellow">5</div><div class="orange">6</div>
+      <div class="red">7</div>
+    </div>
+
+    <h3>stretch</h3>
+    <div class="flex-container multi-line align-content-stretch">
+      <div class="violet">1</div><div class="indigo">2</div><div class="blue">3</div>
+      <div class="green">4</div><div class="yellow">5</div><div class="orange">6</div>
+      <div class="red">7</div>
+    </div>
+  </section>
+
+  <!-- 7. ALIGN SELF -->
+  <section>
+    <h2>7. align-self</h2>
+    <p>Overrides <code>align-items</code> for an individual flex item.</p>
+
+    <div class="flex-container align-self-demo">
+      <div class="violet self-start">flex-start</div>
+      <div class="indigo self-center">center</div>
+      <div class="blue self-end">flex-end</div>
+      <div class="green self-stretch">stretch</div>
+    </div>
+  </section>
+
+  <!-- 8. FLEX SIZING -->
+  <section>
+    <h2>8. Flex Sizing</h2>
+    <p>Flex items can grow, shrink, and have a preferred basis.</p>
+
+    <h3>flex-grow</h3>
+    <div class="flex-container sizing-demo">
+      <div class="violet grow-1">grow: 1</div>
+      <div class="indigo grow-2">grow: 2</div>
+      <div class="blue grow-1">grow: 1</div>
+    </div>
+
+    <h3>flex-shrink</h3>
+    <div class="flex-container shrink-demo">
+      <div class="violet shrink-1">shrink: 1</div>
+      <div class="indigo shrink-0">shrink: 0</div>
+      <div class="blue shrink-1">shrink: 1</div>
+    </div>
+
+    <h3>flex-basis</h3>
+    <div class="flex-container basis-demo">
+      <div class="violet basis-100">basis: 100px</div>
+      <div class="indigo basis-200">basis: 200px</div>
+      <div class="blue basis-300">basis: 300px</div>
+    </div>
+  </section>
+
+  <!-- 9. FLEX SHORTHAND -->
+  <section>
+    <h2>9. flex shorthand</h2>
+    <p><code>flex</code> is shorthand for <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>.</p>
+
+    <div class="flex-container shorthand-demo">
+      <div class="violet flex-1">flex: 1</div>
+      <div class="indigo flex-2">flex: 2</div>
+      <div class="blue flex-auto">flex: 1 1 auto</div>
+    </div>
+  </section>
+
+  <!-- 10. COMBINED EXAMPLE -->
+  <section>
+    <h2>10. Complete Flexbox Example</h2>
+    <p>This combines direction, wrapping, justification, alignment, gap, and flex sizing.</p>
+
+    <div class="flex-container complete-example">
+      <div class="violet">violet</div>
+      <div class="indigo">indigo</div>
+      <div class="blue">blue</div>
+      <div class="green">green</div>
+      <div class="yellow">yellow</div>
+      <div class="orange">orange</div>
+      <div class="red">red</div>
+    </div>
+  </section>
+
+</body>
+</html>

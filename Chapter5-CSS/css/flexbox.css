@@ -1,0 +1,401 @@
+/* =========================================
+   CSS FLEXBOX PLAYGROUND
+   ========================================= */
+
+/* ---------- General Styling ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+section {
+  max-width: 1000px;
+  margin: 0 auto 45px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+code {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ---------- Common Flex Container ---------- */
+
+.flex-container {
+  display: flex;                 /* 1. display: flex */
+  min-height: 100px;
+  margin-bottom: 25px;
+  padding: 10px;
+  border: 3px dashed #777;
+  background: #fafafa;
+  gap: 10px;
+}
+
+/* ---------- Common Flex Items ---------- */
+
+.flex-container > div {
+  width: 90px;
+  min-height: 60px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* ---------- Rainbow Colors ---------- */
+
+.violet { background-color: #9400d3; }
+.indigo { background-color: #4b0082; }
+.blue   { background-color: #0000ff; }
+.green  { background-color: #00a000; }
+.yellow { background-color: #d4b400; }
+.orange { background-color: #ff7f00; }
+.red    { background-color: #ff0000; }
+
+/* =========================================
+   1. DISPLAY FLEX
+   ========================================= */
+
+.display-demo {
+  display: flex;
+}
+
+/* =========================================
+   2. FLEX DIRECTION
+   ========================================= */
+
+.direction-row {
+  flex-direction: row;
+}
+
+.direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.direction-column {
+  flex-direction: column;
+  height: 260px;
+}
+
+.direction-column-reverse {
+  flex-direction: column-reverse;
+  height: 260px;
+}
+
+/* =========================================
+   3. JUSTIFY CONTENT
+   Main axis alignment
+   ========================================= */
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* =========================================
+   4. FLEX WRAP
+   ========================================= */
+
+.wrap-demo {
+  width: 100%;
+  min-height: 180px;
+}
+
+.wrap-demo > div {
+  flex: 0 0 120px;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* =========================================
+   5. ALIGN ITEMS
+   Cross axis alignment
+   ========================================= */
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-stretch > div {
+  height: auto;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.medium-text {
+  font-size: 24px;
+}
+
+.large-text {
+  font-size: 36px;
+}
+
+/* =========================================
+   6. ALIGN CONTENT
+   Works with multiple flex lines
+   ========================================= */
+
+.multi-line {
+  height: 350px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.multi-line > div {
+  flex: 0 0 28%;
+  height: 55px;
+}
+
+.align-content-start {
+  align-content: flex-start;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-content-between {
+  align-content: space-between;
+}
+
+.align-content-around {
+  align-content: space-around;
+}
+
+.align-content-stretch {
+  align-content: stretch;
+}
+
+/* =========================================
+   7. ALIGN SELF
+   Individual item cross-axis alignment
+   ========================================= */
+
+.align-self-demo {
+  height: 220px;
+  align-items: flex-start;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+/* =========================================
+   8. FLEX SIZING
+   ========================================= */
+
+/* flex-grow */
+.sizing-demo > div {
+  width: auto;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.grow-2 {
+  flex-grow: 2;
+}
+
+/* flex-shrink */
+.shrink-demo {
+  width: 500px;
+  max-width: 100%;
+}
+
+.shrink-demo > div {
+  flex-basis: 250px;
+}
+
+.shrink-1 {
+  flex-shrink: 1;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+/* flex-basis */
+.basis-100 {
+  flex-basis: 100px;
+}
+
+.basis-200 {
+  flex-basis: 200px;
+}
+
+.basis-300 {
+  flex-basis: 300px;
+}
+
+/* =========================================
+   9. FLEX SHORTHAND
+   flex: grow shrink basis
+   ========================================= */
+
+.shorthand-demo > div {
+  width: auto;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+/* =========================================
+   10. COMPLETE EXAMPLE
+   ========================================= */
+
+.complete-example {
+  min-height: 300px;
+
+  /* Main axis */
+  flex-direction: row;
+
+  /* Multiple lines */
+  flex-wrap: wrap;
+
+  /* Main-axis alignment */
+  justify-content: space-evenly;
+
+  /* Cross-axis alignment */
+  align-items: center;
+
+  /* Multi-line cross-axis alignment */
+  align-content: space-around;
+
+  /* Space between flex items */
+  gap: 20px;
+}
+
+.complete-example > div {
+  flex: 1 1 180px;
+  min-height: 80px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  section {
+    padding: 18px;
+  }
+
+  .flex-container {
+    overflow-x: auto;
+  }
+
+  .direction-column,
+  .direction-column-reverse {
+    width: 100%;
+  }
+
+  .multi-line {
+    height: 400px;
+  }
+}
