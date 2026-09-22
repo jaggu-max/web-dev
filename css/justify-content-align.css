@@ -64,9 +64,12 @@ h1 {
     
 #orange {
      
-    align-self:  flex-end;
-    align-self: flex-start;
+    align-self:  flex-start;
+    /* align-self: flex-end;
     align-self: center;
-    align-self: baseline;
+    align-self: baseline; */
+
+    flex-grow: 1;
+    flex-shrink: 1;
 
 }
