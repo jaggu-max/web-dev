@@ -4,9 +4,9 @@
     background-color: azure;
     margin: 10px auto;
     border: 2px solid black;
-    display: flex;
+    display: flex;     
     flex-direction: row;
-    /* flex-direction:column-reverse;
+    /* flex-direction:column-reverse   ;
     flex-direction: row-reverse;
     flex-direction: column; */
     /* flex-wrap: wrap; */
