@@ -1,0 +1,128 @@
+/* =========================================================
+   CSS MEDIA QUERIES
+   Concepts:
+   width
+   max-width
+   min-width
+   min + max
+   orientation
+   ========================================================= */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+/* ---------------------------------------------------------
+   1. EXACT WIDTH
+   --------------------------------------------------------- */
+
+@media (width: 400px) {
+    h1 {
+        background-color: red;
+    }
+}
+
+/* width: 400px means EXACTLY 400px */
+
+/* ---------------------------------------------------------
+   2. MIN WIDTH
+   --------------------------------------------------------- */
+
+@media (min-width: 700px) {
+    h1 {
+        background-color: greenyellow;
+    }
+}
+
+/* min-width: 700px means 700px OR MORE */
+
+/* ---------------------------------------------------------
+   3. MAX WIDTH
+   --------------------------------------------------------- */
+
+@media (max-width: 200px) {
+    h1 {
+        background-color: pink;
+    }
+}
+
+/* max-width: 200px means 200px OR LESS */
+
+/* ---------------------------------------------------------
+   4. RANGE / BETWEEN
+   --------------------------------------------------------- */
+
+@media (min-width: 200px) and (max-width: 300px) {
+    h1 {
+        background-color: magenta;
+    }
+}
+
+/*
+   This means BOTH conditions must be true:
+
+   200px <= screen width <= 300px
+*/
+
+/* ---------------------------------------------------------
+   5. ORIENTATION
+   --------------------------------------------------------- */
+
+@media (orientation: landscape) {
+    .box {
+        background-color: green;
+    }
+}
+
+@media (orientation: portrait) {
+    .box {
+        background-color: orange;
+    }
+}
+
+/*
+   landscape -> screen is wider than it is tall
+   portrait  -> screen is taller than it is wide
+*/
+
+/* ---------------------------------------------------------
+   6. COMBINING CONDITIONS
+   --------------------------------------------------------- */
+
+@media (orientation: landscape) and (min-width: 700px) {
+    .box {
+        width: 300px;
+        background-color: purple;
+    }
+}
+
+/*
+   BOTH must be true:
+
+   1. landscape
+   AND
+   2. minimum width 700px
+*/
+
+/*
+   QUICK MEMORY:
+
+   max-width -> BELOW / UP TO a width
+   min-width -> ABOVE / FROM a width
+   width     -> EXACT width
+   and       -> BOTH conditions
+   landscape -> horizontal / wide
+   portrait  -> vertical / tall
+*/

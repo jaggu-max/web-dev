@@ -1,0 +1,111 @@
+/* =========================================================
+   CSS ANIMATIONS
+   Concepts:
+   @keyframes
+   animation-name
+   animation-duration
+   animation-timing-function
+   animation-delay
+   animation-iteration-count
+   animation-direction
+   animation shorthand
+   percentages in keyframes
+   ========================================================= */
+
+.box {
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+
+    /* Long form */
+    animation-name: fontAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 3;
+    animation-direction: normal;
+}
+
+/* Define what changes during animation */
+@keyframes fontAnimation {
+    from {
+        font-size: 20px;
+    }
+
+    to {
+        font-size: 40px;
+    }
+}
+
+/* ---------------------------------------------------------
+   ANIMATION DIRECTION
+   normal   -> normal direction
+   reverse  -> reverse direction
+   alternate -> forward, then backward
+   alternate-reverse -> backward, then forward
+   --------------------------------------------------------- */
+
+/*
+.box {
+    animation-direction: alternate;
+}
+*/
+
+/* ---------------------------------------------------------
+   ANIMATION SHORTHAND
+   name duration timing-function delay count direction
+   --------------------------------------------------------- */
+
+/*
+.box {
+    animation: widthAnimate 3s ease-in 0s infinite normal;
+}
+*/
+
+/* ---------------------------------------------------------
+   WIDTH ANIMATION
+   --------------------------------------------------------- */
+
+@keyframes widthAnimate {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 400px;
+    }
+}
+
+/* ---------------------------------------------------------
+   PERCENTAGE KEYFRAMES
+   --------------------------------------------------------- */
+
+.color-box {
+    height: 100px;
+    width: 300px;
+    margin-top: 30px;
+
+    animation: colAnimate 3s ease-in 0s 2 normal;
+}
+
+@keyframes colAnimate {
+    0% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
+
+/*
+   Percentage means position in the animation timeline:
+
+   0%   -> beginning
+   50%  -> middle
+   100% -> end
+*/

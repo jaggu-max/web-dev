@@ -1,0 +1,72 @@
+/* =========================================================
+   CSS GRID PLACEMENT
+   Concepts:
+   grid-column-start / end
+   grid-row-start / end
+   grid-column shorthand
+   grid-row shorthand
+   span
+   ========================================================= */
+
+.container {
+    width: 600px;
+    height: 300px;
+    background-color: lightyellow;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.item {
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* -----------------------------------------
+   COLUMN PLACEMENT
+   ----------------------------------------- */
+
+/* Start at column line 1 and end at line 4
+   => occupies 3 columns */
+.one {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* Shorthand:
+   start column / end column */
+.two {
+    grid-column: 1 / 3;
+}
+
+/* Start at column 1 and occupy 2 columns */
+.three {
+    grid-column: 1 / span 2;
+}
+
+/* -----------------------------------------
+   ROW PLACEMENT
+   ----------------------------------------- */
+
+.four {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/* Shorthand */
+.five {
+    grid-row: 1 / 3;
+}
+
+/* Very useful memory:
+   grid-column: start / end;
+   grid-row:    start / end;
+
+   Example:
+   grid-column: 1 / 3;
+
+   means column line 1 -> column line 3.
+*/

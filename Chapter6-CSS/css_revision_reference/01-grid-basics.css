@@ -1,0 +1,36 @@
+/* =========================================================
+   CSS GRID BASICS
+   Concepts: display:grid, rows, columns, fr, repeat()
+   ========================================================= */
+
+.container {
+    width: 600px;
+    height: 300px;
+    background-color: lightyellow;
+
+    /* Turns the container into a grid */
+    display: grid;
+
+    /* 3 equal rows */
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /* 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Same as: 1fr 1fr 1fr */
+    /* repeat(3, 1fr) = create 3 equal tracks */
+
+    /* Gap between rows AND columns */
+    grid-gap: 10px;
+
+    /* Modern equivalent */
+    /* gap: 10px; */
+}
+
+.item {
+    width: 100px;
+    height: 50px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+}
