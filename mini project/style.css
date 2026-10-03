@@ -1,0 +1,241 @@
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    font-family: "Spicy Rice", serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   MAIN BOX / BACKGROUND
+   ========================= */
+
+.main_box {
+    background: url("photo.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+
+/* =========================
+   MENU BUTTON
+   ========================= */
+
+.btn_one {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+}
+
+.btn_one i {
+    cursor: pointer;
+}
+
+.btn_one i:hover {
+    font-size: 40px;
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar_menu {
+    position: fixed;
+
+    /* Hidden outside the screen */
+    left: -306px;
+
+    height: 100vh;
+    width: 300px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+
+    /* Smooth opening */
+    transition: left 0.3s ease;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.sidebar_menu .logo {
+    position: absolute;
+
+    width: 100%;
+    line-height: 60px;
+
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    height: 60px;
+}
+
+.sidebar_menu .logo a {
+    position: absolute;
+
+    left: 50px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   CLOSE BUTTON
+   ========================= */
+
+.sidebar_menu .btn_two {
+    color: grey;
+
+    font-size: 25px;
+
+    line-height: 60px;
+
+    position: absolute;
+    left: 275px;
+
+    opacity: 0;
+
+    transition: all 0.3s ease;
+}
+
+.sidebar_menu .btn_two i {
+    cursor: pointer;
+}
+
+.sidebar_menu .btn_two i:hover {
+    font-size: 30px;
+}
+
+
+/* =========================
+   MENU
+   ========================= */
+
+.sidebar_menu .menu {
+    position: absolute;
+
+    width: 100%;
+    top: 80px;
+}
+
+
+/* Individual menu items */
+
+.sidebar_menu .menu li {
+    margin-top: 6px;
+
+    padding: 14px 20px;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Hover effect */
+
+.sidebar_menu .menu li:hover {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+
+/* Menu links */
+
+.sidebar_menu .menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+}
+
+
+/* Menu icons */
+
+.sidebar_menu .menu i {
+    padding-right: 8px;
+}
+
+
+/* =========================
+   SOCIAL MEDIA
+   ========================= */
+
+.sidebar_menu .social_media {
+    position: absolute;
+
+    left: 25%;
+    bottom: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Social media links */
+
+.sidebar_menu .social_media a {
+    color: white;
+
+    opacity: 0.5;
+
+    margin: 5px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Social media hover */
+
+.sidebar_menu .social_media a:hover {
+    opacity: 1;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   HIDDEN CHECKBOX
+   ========================= */
+
+#check {
+    display: none;
+}
+
+
+/* =========================
+   OPEN SIDEBAR
+   ========================= */
+
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+
+
+/* =========================
+   SHOW CLOSE BUTTON
+   ========================= */
+
+#check:checked ~ .sidebar_menu .btn_two {
+    opacity: 1;
+}
+
+
+/* =========================
+   HIDE MENU BUTTON
+   ========================= */
+
+#check:checked ~ .btn_one {
+    opacity: 0;
+}
