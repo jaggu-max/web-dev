@@ -1,0 +1,16 @@
+/* Use this file when you want to practice adding your own CSS on top of Bootstrap. */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.my-box {
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+}
+
+/*
+Bootstrap handles most styling.
+Use your own CSS only when you need custom design.
+*/
